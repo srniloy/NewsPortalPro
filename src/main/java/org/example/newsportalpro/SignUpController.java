@@ -1,20 +1,25 @@
 package org.example.newsportalpro;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.*;
-        import java.util.HashMap;
+import java.net.URL;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.ResourceBundle;
 
-public class SignUpController {
+public class SignUpController implements Initializable {
 
     @FXML
     private TextField PasswordTextField;
@@ -27,6 +32,9 @@ public class SignUpController {
 
     @FXML
     private TextField ConfirmedPasswordTextField;
+
+    @FXML
+    private ComboBox<String> userTypeCombo;
 
     @FXML
     void showTermsAndPrivacyPolicy(ActionEvent event) {
@@ -51,13 +59,15 @@ public class SignUpController {
             String confirmedPassword = ConfirmedPasswordTextField.getText();
             String email = EmailTextField.getText();
             String userName = UserTextField.getText().trim();
+            String userType = userTypeCombo.getValue();
+
 
             if (!password.equals(confirmedPassword) || !email.contains("@")) {
                 showAlert(Alert.AlertType.ERROR, "Error", "Passwords do not match or invalid email.");
                 return;
             }
 
-            UserSignUpInfo userSignUpInfo = new UserSignUpInfo(userName, email, password, confirmedPassword);
+            UserSignUpInfo userSignUpInfo = new UserSignUpInfo(userName, email, userType, password, confirmedPassword);
             //    private final String userInformationTxtPath = "E:\\DBMS\\NewspaperPortal\\src\\main\\java\\com\\example\\New_User.txt";
 //            String fileLocation = "src/main/resources/org/example/newsportalpro/database_files/";
             File file = new File("src/main/resources/org/example/newsportalpro/database_files/users_info.txt");
@@ -145,6 +155,11 @@ public class SignUpController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        userTypeCombo.setItems(FXCollections.observableArrayList("Reader", "ProthomAlo-Writer", "TheDailyStar-Writer"));
+    }
 }
 
 class UserSignUpInfo implements Serializable {
@@ -152,12 +167,14 @@ class UserSignUpInfo implements Serializable {
     String email;
     String password;
     String confirmedPassword;
+    String userType;
 
-    UserSignUpInfo(String userName, String email, String password, String confirmedPassword) {
+    UserSignUpInfo(String userName, String email,String userType, String password, String confirmedPassword) {
         this.email = email;
         this.userName = userName;
         this.password = password;
         this.confirmedPassword = confirmedPassword;
+        this.userType = userType;
     }
 
 }

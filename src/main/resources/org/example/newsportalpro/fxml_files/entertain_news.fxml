@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.newsportalpro.EntertainNewsController">
+    <children>
+        <Label layoutX="352.0" layoutY="41.0" prefHeight="31.0" prefWidth="190.0" text="Entertainment News">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Line endX="450.0" layoutX="450.0" layoutY="107.0" startX="-450.0" />
+        <Line endX="476.10003662109375" endY="-1.52587890625E-5" layoutX="425.0" layoutY="113.0" startX="-425.0" startY="-1.52587890625E-5" />
+      <AnchorPane fx:id="newsPane1" layoutX="46.0" layoutY="129.0" prefHeight="195.0" prefWidth="219.0" style="-fx-border-radius: 1px; -fx-border-color: #ccc;">
+         <children>
+            <ImageView fx:id="img1" fitHeight="127.0" fitWidth="219.0" pickOnBounds="true" />
+            <Text fx:id="title1" layoutX="7.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="title" wrappingWidth="210.0" />
+            <Text fx:id="writer1" layoutX="7.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rakibul Hasan" wrappingWidth="127.99999999999989" />
+            <Text fx:id="date1" layoutX="147.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02/05/2024" wrappingWidth="68.00001831054715" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newsPane2" layoutX="332.0" layoutY="129.0" prefHeight="195.0" prefWidth="219.0" style="-fx-border-color: #ccc; -fx-border-width: 1px;">
+         <children>
+            <ImageView fx:id="img2" fitHeight="127.0" fitWidth="219.0" pickOnBounds="true" />
+            <Text fx:id="title2" layoutX="7.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="210.0" />
+            <Text fx:id="writer2" layoutX="7.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rakibul Hasan" wrappingWidth="127.99999999999989" />
+            <Text fx:id="date2" layoutX="147.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02/05/2024" wrappingWidth="68.00001831054715" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newsPane3" layoutX="616.0" layoutY="129.0" prefHeight="195.0" prefWidth="219.0" style="-fx-border-color: #ccc; -fx-border-width: 1px;">
+         <children>
+            <ImageView fx:id="img3" fitHeight="127.0" fitWidth="219.0" pickOnBounds="true" />
+            <Text fx:id="title3" layoutX="7.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="210.0" />
+            <Text fx:id="writer3" layoutX="7.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rakibul Hasan" wrappingWidth="127.99999999999989" />
+            <Text fx:id="date3" layoutX="147.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02/05/2024" wrappingWidth="68.00001831054715" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newsPane4" layoutX="46.0" layoutY="347.0" prefHeight="195.0" prefWidth="219.0" style="-fx-border-color: #ccc; -fx-border-width: 1px;">
+         <children>
+            <ImageView fx:id="img4" fitHeight="127.0" fitWidth="219.0" pickOnBounds="true" />
+            <Text fx:id="title4" layoutX="7.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="210.0" />
+            <Text fx:id="writer4" layoutX="7.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rakibul Hasan" wrappingWidth="127.99999999999989" />
+            <Text fx:id="date4" layoutX="147.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02/05/2024" wrappingWidth="68.00001831054715" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newsPane5" layoutX="332.0" layoutY="347.0" prefHeight="195.0" prefWidth="219.0" style="-fx-border-color: #ccc; -fx-border-width: 1px;">
+         <children>
+            <ImageView fx:id="img5" fitHeight="127.0" fitWidth="219.0" pickOnBounds="true" />
+            <Text fx:id="title5" layoutX="7.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="210.0" />
+            <Text fx:id="writer5" layoutX="7.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rakibul Hasan" wrappingWidth="127.99999999999989" />
+            <Text fx:id="date5" layoutX="147.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02/05/2024" wrappingWidth="68.00001831054715" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newsPane6" layoutX="616.0" layoutY="347.0" prefHeight="195.0" prefWidth="219.0" style="-fx-border-color: #ccc; -fx-border-width: 1px;">
+         <children>
+            <ImageView fx:id="img6" fitHeight="127.0" fitWidth="219.0" pickOnBounds="true" />
+            <Text fx:id="title6" layoutX="7.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="210.0" />
+            <Text fx:id="writer6" layoutX="7.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rakibul Hasan" wrappingWidth="127.99999999999989" />
+            <Text fx:id="date6" layoutX="147.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02/05/2024" wrappingWidth="68.00001831054715" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="41.0" layoutY="41.0" onMouseClicked="#backIconClickAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/arrow.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

@@ -58,19 +58,50 @@ public class SigninController {
             if(hs.contains(email) && hm.get(email).password.compareTo(pass) == 0){
                 System.out.println("ini-email: "+email+" ini-Password: "+ pass);
                 System.out.println("store-userName: "+hs.contains(email)+" store-Password: "+ hm.get(email).password);
+                System.out.println("UserType: "+ hm.get(email).userType);
+                FXMLLoader fl = null;
+                if(hm.get(email).userType.equals("Reader")){
+                    fl = new FXMLLoader(getClass().getResource("fxml_files/reader_homepage.fxml"));
+                    Parent  mainPanel = fl.load();
+                    ReaderHomepageController cntrl = fl.getController();
+                    cntrl.setProfileInfo(email);
+                    Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(mainPanel,900,600));
+                    stage.setTitle("Newspaper Dashboard");
+                    stage.setResizable(false);
+                    stage.centerOnScreen();
+                    stage.show();
+                    st.close();
+                } else if (hm.get(email).userType.equals("ProthomAlo-Writer")) {
+                    fl = new FXMLLoader(getClass().getResource("fxml_files/pa_admin_dashboard.fxml"));
+                    Parent  mainPanel = fl.load();
+                    PaAdminDashboardController cntrl = fl.getController();
+                    cntrl.setProfileInfo(email, hm.get(email).userName);
+                    Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(mainPanel,900,600));
+                    stage.setTitle("Admin Dashboard");
+                    stage.setResizable(false);
+                    stage.centerOnScreen();
+                    stage.show();
+                    st.close();
+                }
+                else if (hm.get(email).userType.equals("TheDailyStar-Writer")) {
+                    fl = new FXMLLoader(getClass().getResource("fxml_files/tds_admin_dashboard.fxml"));
+                    Parent  mainPanel = fl.load();
+                    TdsAdminDashboardController cntrl = fl.getController();
+                    cntrl.setProfileInfo(email, hm.get(email).userName);
+                    Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(mainPanel,900,600));
+                    stage.setTitle("Admin Dashboard");
+                    stage.setResizable(false);
+                    stage.centerOnScreen();
+                    stage.show();
+                    st.close();
+                }
 
-                FXMLLoader fl = new FXMLLoader(getClass().getResource("fxml_files/reader_homepage.fxml"));
-                Parent  mainPanel = fl.load();
-                ReaderHomepageController cntrl = fl.getController();
-                cntrl.setProfileInfo(email);
-                Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(mainPanel,900,600));
-                stage.setTitle("Newspaper Dashboard");
-                stage.setResizable(false);
-                stage.centerOnScreen();
-                stage.show();
-                st.close();
             }
 
         }catch (Exception e){

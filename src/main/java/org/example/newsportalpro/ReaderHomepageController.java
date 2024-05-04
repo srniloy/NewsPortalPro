@@ -31,7 +31,7 @@ public class ReaderHomepageController {
     @FXML
     void Logoutbtn(ActionEvent event) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SignIn.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml_files/sign_in.fxml"));
         Parent dashboardPanel = fxmlLoader.load();
         Stage stage = new Stage();
 
@@ -44,7 +44,7 @@ public class ReaderHomepageController {
 
     @FXML
     void Prothomalobtn(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Prothomalo.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml_files/pa_homepage.fxml"));
 
         Parent dashboardPanel = fxmlLoader.load();
         Stage stage = new Stage();
@@ -60,7 +60,7 @@ public class ReaderHomepageController {
 
     @FXML
     void readthedailystarbtn(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TheDailyStar.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml_files/tds_homepage.fxml"));
 
         Parent dashboardPanel = fxmlLoader.load();
         Stage stage = new Stage();
@@ -75,7 +75,27 @@ public class ReaderHomepageController {
 
     @FXML
     void readdhakatribunebtn(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DhakaTribune.fxml"));
+//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DhakaTribune.fxml"));
+//
+//        Parent dashboardPanel = fxmlLoader.load();
+//        Stage stage = new Stage();
+//
+//        stage.setScene(new Scene(dashboardPanel, 900, 600));
+//        stage.setTitle("Newspaper Dashboard");
+//        stage.show();
+//        Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+//        st.close();
+
+    }
+
+
+    @FXML
+    void profileButtonAction(ActionEvent event) {
+
+    }
+    @FXML
+    void sportsButtonAction(ActionEvent event) throws Exception{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml_files/sports_news.fxml"));
 
         Parent dashboardPanel = fxmlLoader.load();
         Stage stage = new Stage();
@@ -85,7 +105,33 @@ public class ReaderHomepageController {
         stage.show();
         Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
         st.close();
+    }
+    @FXML
+    void businessButtonAction(ActionEvent event) throws Exception{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml_files/business_news.fxml"));
 
+        Parent dashboardPanel = fxmlLoader.load();
+        Stage stage = new Stage();
+
+        stage.setScene(new Scene(dashboardPanel, 900, 600));
+        stage.setTitle("Newspaper Dashboard");
+        stage.show();
+        Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+        st.close();
+    }
+
+    @FXML
+    void entertainmentButtonAction(ActionEvent event) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml_files/entertain_news.fxml"));
+
+        Parent dashboardPanel = fxmlLoader.load();
+        Stage stage = new Stage();
+
+        stage.setScene(new Scene(dashboardPanel, 900, 600));
+        stage.setTitle("Newspaper Dashboard");
+        stage.show();
+        Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+        st.close();
     }
     void setProfileInfo(String email) {
         userEmail = email;

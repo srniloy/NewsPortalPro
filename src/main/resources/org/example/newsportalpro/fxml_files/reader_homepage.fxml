@@ -37,11 +37,11 @@
                             </children>
                         </Pane>
                         <Button minWidth="300.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #3F2B63;" text="Home" textFill="WHITE" />
-                        <Button layoutX="10.0" layoutY="210.0" minWidth="300.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #3F2B63;" text="Business" textFill="WHITE" />
-                        <Button layoutX="10.0" layoutY="262.0" minWidth="300.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #3F2B63;" text="Sports" textFill="WHITE" />
-                        <Button layoutX="10.0" layoutY="314.0" minWidth="300.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #3F2B63;" text="Entertainment" textFill="WHITE" />
-                        <Button layoutX="10.0" layoutY="366.0" minWidth="300.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #3F2B63;" text="Profile" textFill="WHITE" />
-                        <Button layoutX="10.0" layoutY="366.0" minWidth="300.0" mnemonicParsing="false" onAction="#Logoutbtn" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #D70040;" text="Logout" textFill="WHITE" />
+                        <Button layoutX="10.0" layoutY="210.0" minWidth="300.0" mnemonicParsing="false" onAction="#businessButtonAction" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #3F2B63;" text="Business" textFill="WHITE" />
+                        <Button layoutX="10.0" layoutY="262.0" minWidth="300.0" mnemonicParsing="false" onAction="#sportsButtonAction" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #3F2B63;" text="Sports" textFill="WHITE" />
+                        <Button layoutX="10.0" layoutY="314.0" minWidth="300.0" mnemonicParsing="false" onAction="#entertainmentButtonAction" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #3F2B63;" text="Entertainment" textFill="WHITE" />
+                        <Button layoutX="10.0" layoutY="366.0" minWidth="300.0" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #3F2B63;" text="Profile" textFill="WHITE" />
+                        <Button layoutX="10.0" layoutY="366.0" minWidth="300.0" mnemonicParsing="false" onAction="#Logoutbtn" prefHeight="52.0" prefWidth="319.0" style="-fx-background-color: #770021;" text="Logout" textFill="WHITE" />
                     </children>
                 </VBox>
             </children>
